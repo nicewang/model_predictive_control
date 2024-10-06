@@ -1,9 +1,9 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
 Sample:
 $$
 E = mc^2
 $$
-
+-->
 ## Model Predictive Control
 > [Model Predictive Control Template](basic_template/README.md)
 
