@@ -5,9 +5,11 @@ E = mc^2
 $$
 -->
 ## Model Predictive Control
+### 1. Basic Template
 > [Model Predictive Control Template](basic_template/README.md)
 
-And, there are several ways for combining learning and model predictive control<sup>[1]</sup>:
+### 2. Machine Learning and Model Predictive Control<sup>[1]</sup>
+And, there are several ways for combining learning and model predictive control:
 > 1. [Learning __inside__ of model predictive control](learning_inside_mpc/README.md):
 > 
 > 	(e.g. learn a neural network model of robotic dynamics)
@@ -41,7 +43,7 @@ And, there are several ways for combining learning and model predictive control<
 [3] Some related work:
 > 1. Sacks, Jacob, and Byron Boots. "Learning to optimize in model predictive control." _2022_ _International_ _Conference_ _on_ _Robotics_ _and_ _Automation_ _(ICRA)_. IEEE, 2022.
 
-[4] Some other ideas:
+[4] Some other ideas for `Learning inside of MPC`:
 
 - Learn __subgoals__ for MPC
 	
