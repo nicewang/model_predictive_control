@@ -22,7 +22,7 @@ And, there are several ways for combining learning and model predictive control:
 > 
 > 2. Model predictive control __is__ __itself__ a learning algorithm
 > 
-> 	(tune optimization for better performance, i.e., MPC as a learner<sup>[2]</sup> for parameter tuning when training)
+> 	(tune optimization for better performance, i.e., MPC as a learner for parameter tuning when training)
 > 
 > 3. Model predictive control __inside__ of a learning algorithm
 > 
