@@ -6,5 +6,7 @@
 *.so
 *.dylib
 *.dll
+**/bin/
 **/build/
+**/out/
 **/*.pdf

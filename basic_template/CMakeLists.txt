@@ -1,43 +1,60 @@
 cmake_minimum_required(VERSION 3.10)
 project(mpc_project)
 
-# Find Eigen
+# Find and Link Eigen3
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
-# Include Eigen directories
-include_directories(${EIGEN3_INCLUDE_DIR})
-
+# Compiler Settings
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "-Wall")
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-# Set dir of include, src and obj
+# Directory Paths
 set(INCDIR ${CMAKE_SOURCE_DIR}/include)
 set(SRCDIR ${CMAKE_SOURCE_DIR}/src)
-set(OBJDIR ${CMAKE_BINARY_DIR}/obj)
+set(BINDIR ${CMAKE_BINARY_DIR}/bin)
 
-# Set obj files and src files
-set(SRCFILES ${CMAKE_CURRENT_LIST_DIR}/src/mpc.cpp ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp)
-set(OBJFILES ${OBJDIR}/mpc.o ${OBJDIR}/main.o)
+# Source Files
+set(SRCFILES 
+    ${SRCDIR}/mpc.cpp 
+    ${SRCDIR}/main.cpp
+)
 
-# Include Dir
+set(HEADERS
+    ${INCDIR}/mpc.h
+)
+
+# Include Directories
 include_directories(${INCDIR})
+include_directories(${EIGEN3_INCLUDE_DIR})
 
-# Add an object library to control the generation of object files
-add_library(mpc_objects OBJECT ${SRCFILES})
+# Create Executable
+add_executable(mpc ${SRCFILES} ${HEADERS})
 
-# Set the output directory to the obj folder
-set_target_properties(mpc_objects PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY ${OBJDIR}
-    LIBRARY_OUTPUT_DIRECTORY ${OBJDIR}
-    RUNTIME_OUTPUT_DIRECTORY ${OBJDIR}
+# Link Eigen3
+target_link_libraries(mpc PRIVATE Eigen3::Eigen)
+
+# Set output directory
+set_target_properties(mpc PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${BINDIR}
 )
 
-# executable file
-add_executable(mpc.so $<TARGET_OBJECTS:mpc_objects>)
+# # Optional: Build Shared Library
+# add_library(libmpc SHARED ${SRCDIR}/mpc.cpp)
+# target_link_libraries(libmpc PRIVATE Eigen3::Eigen)
+# set_target_properties(libmpc PROPERTIES
+#     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+# )
 
-# clean
-add_custom_target(clean_mpc
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${OBJDIR}
-    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_BINARY_DIR}/mpc.so
+# Build and run
+add_custom_target(run
+    COMMAND ${BINDIR}/mpc
+    DEPENDS mpc
+    COMMENT "Running MPC example..."
 )
 
+# Clean build artifacts
+add_custom_target(clean_all
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}
+    COMMENT "Cleaning all build artifacts..."
+)

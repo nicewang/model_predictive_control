@@ -7,3 +7,44 @@ Basic Model Predictive Control Template
 - Feedback Correction
 
 https://nicewang.github.io/model_predictive_control/
+
+### Appendix: Build & Run
+
+- Manually:
+```bash
+# Build
+mkdir out/ && g++ -std=c++11 -I/usr/local/include/eigen3 -Iinclude src/mpc.cpp src/main.cpp -o out/mpc-demo
+
+# Run
+./out/mpc-demo
+
+# Clean
+rm -rf out/
+```
+- Use Make:
+```bash
+# Build
+make
+
+# Run
+./bin/mpc
+
+# Clean
+make clean
+
+- Use CMakeLists
+```bash
+# Build
+mkdir build && cd build
+cmake ..
+make
+
+# Run
+./bin/mpc
+
+# Or Build and Run
+make run
+
+# Clean
+cmake --build . --target clean_all
+```
