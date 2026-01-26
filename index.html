@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPC Components</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d3748;
+            font-size: 28px;
+        }
+        
+        .framework {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .section {
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .section:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .section p {
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .section-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .cycle {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .cycle h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .cycle-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 2px solid #667eea;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .arrow {
+            color: #667eea;
+            font-size: 20px;
+        }
+        
+        .key-equation {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fef5e7;
+            border-left: 5px solid #f39c12;
+            border-radius: 8px;
+        }
+        
+        .key-equation h3 {
+            color: #d68910;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .equation {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            color: #2d3748;
+            font-size: 13px;
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            .cycle-steps {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 MPC Components Framework</h1>
+        
+        <div class="framework">
+            <div class="section">
+                <h2><span class="section-number">1</span>Prediction Model</h2>
+                <p>Discrete-time system dynamics model used to predict future system states over the prediction horizon</p>
+                <p style="margin-top: 8px; color: #718096;"><code>x(k+1) = Ax(k) + Bu(k)</code></p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="section-number">2</span>Cost Function & Constraints</h2>
+                <p>Define the optimization objective and constraints:</p>
+                <p style="margin-top: 8px; color: #718096;">
+                    • Minimize tracking error and control effort<br>
+                    • Input constraints (u_min ≤ u ≤ u_max)<br>
+                    • State constraints (optional)
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="section-number">3</span>Receding Horizon Optimization</h2>
+                <p>Over the N-step prediction horizon, simultaneously optimize all future control inputs U = [u₀, u₁, ..., u_{N-1}]</p>
+                <p style="margin-top: 8px; color: #718096;">Solve a global optimization problem, not a greedy step-by-step approach</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="section-number">4</span>Feedback Correction</h2>
+                <p>Apply only the optimal control input at the current time step u₀, then re-optimize at the next time step to eliminate model mismatch</p>
+                <p style="margin-top: 8px; color: #718096;">This is the essence of "Receding Horizon"—the optimization window rolls forward with updated measurements</p>
+            </div>
+        </div>
+        
+        <div class="cycle">
+            <h3>⚙️ MPC Control Loop at Each Time Step</h3>
+            <div class="cycle-steps">
+                <div class="step">Measure State x(k)</div>
+                <span class="arrow">→</span>
+                <div class="step">Build Optimization Problem</div>
+                <span class="arrow">→</span>
+                <div class="step">Solve for Optimal Sequence</div>
+                <span class="arrow">→</span>
+                <div class="step">Apply u₀</div>
+                <span class="arrow">→</span>
+                <div class="step">k:=k+1</div>
+            </div>
+        </div>
+        
+        <div class="key-equation">
+            <h3>📐 Standard Quadratic MPC Optimization Problem</h3>
+            <div class="equation">
+min Σᵢ₌₀^(N-1) [||x(k+i) - x_ref||²_Q + ||u(k+i)||²_R]<br><br>
+subject to:<br>
+&nbsp;&nbsp;x(k+i+1) = Ax(k+i) + Bu(k+i)<br>
+&nbsp;&nbsp;u_min ≤ u(k+i) ≤ u_max<br>
+&nbsp;&nbsp;x(k|k) = x(k)  [current measured state]
+            </div>
+        </div>
+    </div>
+</body>
+</html>
