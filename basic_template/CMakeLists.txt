@@ -35,17 +35,19 @@ add_executable(mpc ${SRCFILES} ${HEADERS})
 target_link_libraries(mpc PRIVATE Eigen3::Eigen)
 
 # Set Source File
-set(INCDIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
-set(SRCDIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
-
 set(SRCFILES 
-    ${SRCDIR}/mpc.cpp 
-    ${SRCDIR}/main.cpp
+    src/mpc.cpp 
+    src/main.cpp
 )
 
 set(HEADERS
-    ${INCDIR}/mpc.h
+    include/mpc.h
 )
+
+include_directories(include)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
+add_executable(mpc ${SRCFILES} ${HEADERS})
 
 # Set output directory
 set_target_properties(mpc PROPERTIES

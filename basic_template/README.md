@@ -8,6 +8,19 @@ Basic Model Predictive Control Template
 
 https://nicewang.github.io/model_predictive_control/
 
+#### Package Structure
+```
+${project_workspace}/
+├── CMakeLists.txt
+└── basic_template/
+    ├── CMakeLists.txt
+    ├── src/
+    │   ├── mpc.cpp
+    │   └── main.cpp
+    └── include/
+        └── mpc.h
+```
+
 ### Appendix: Locally Build & Run
 
 - Manually:
