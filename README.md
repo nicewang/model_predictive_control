@@ -6,11 +6,11 @@ $$
 -->
 ## Model Predictive Control
 ### 1. Basic Template
-> [Model Predictive Control Template](basic_template/README.md)
+> [Model Predictive Control Template](basic_template/)
 
 ### 2. Machine Learning and Model Predictive Control<sup>[1]</sup>
 And, there are several ways for combining learning and model predictive control:
-> 1. [Learning __inside__ of model predictive control](learning_inside_mpc/README.md):
+> 1. [Learning __inside__ of model predictive control](learning_inside_mpc/):
 > 
 > 	(e.g. learn a neural network model of robotic dynamics)
 > 
