@@ -60,5 +60,5 @@ make
 make run
 
 # Clean
-cmake --build . --target clean_all
+cd .. && rm -rf build/
 ```
