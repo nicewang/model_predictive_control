@@ -8,7 +8,7 @@ Basic Model Predictive Control Template
 
 https://nicewang.github.io/model_predictive_control/
 
-### Appendix: Build & Run
+### Appendix: Locally Build & Run
 
 - Manually:
 ```bash

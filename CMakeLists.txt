@@ -9,6 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(basic_template)
 
 # Clean all
+# add_custom_target(clean_all
+#     COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
+# )
 add_custom_target(clean_all
-    COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
+    COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_BINARY_DIR}"
+    COMMENT "Removing entire build directory"
 )

@@ -53,8 +53,8 @@ add_custom_target(run
     COMMENT "Running MPC example..."
 )
 
-# Clean build artifacts
-add_custom_target(clean_all
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}
-    COMMENT "Cleaning all build artifacts..."
-)
+# # Clean build artifacts (for local run) 
+# add_custom_target(clean_all
+#     COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}
+#     COMMENT "Cleaning all build artifacts..."
+# )
