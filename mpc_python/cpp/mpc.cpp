@@ -1,4 +1,4 @@
-#include "../include/mpc.h"
+#include "mpc.h"
 
 // ============================================================================
 // CONSTRUCTOR: Initialize MPC controller with system parameters
