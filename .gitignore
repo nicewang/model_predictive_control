@@ -10,3 +10,4 @@
 **/build/
 **/out/
 **/*.pdf
+**/__pycache__/
