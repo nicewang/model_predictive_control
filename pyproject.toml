@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.7", 
+    "cmake>=3.18",            
+    "ninja",                  
+    "pybind11[global]>=2.6"   
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "mpc_python"
+version = "0.1.0"
+description = "Python bindings for C++ Basic MPC Template"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy"
+]
+
+[tool.scikit-build]
+cmake.source-dir = "." 
+wheel.packages = ["mpc_python"]
