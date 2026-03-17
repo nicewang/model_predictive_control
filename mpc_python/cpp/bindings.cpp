@@ -1,3 +1,12 @@
+/*
+ * @file            model_predictive_control/mpc_python/cpp/bindings.cpp
+ * @description     
+ * @author          nicewang <wangxiaonannice@gmail.com>
+ * @createTime      2026-03-16
+ * @lastModified    2026-03-16
+ * Copyright © Xiaonan (Nice) Wang. All rights reserved
+*/
+
 #include <pybind11/pybind11.h>
 #include <pybind11/eigen.h> 
 #include "mpc.h"

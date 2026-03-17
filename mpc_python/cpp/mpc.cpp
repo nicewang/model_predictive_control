@@ -1,3 +1,12 @@
+/*
+ * @file            model_predictive_control/mpc_python/cpp/mpc.cpp
+ * @description     
+ * @author          nicewang <wangxiaonannice@gmail.com>
+ * @createTime      2026-03-16
+ * @lastModified    2026-03-17
+ * Copyright © Xiaonan (Nice) Wang. All rights reserved
+*/
+
 #include "mpc.h"
 
 // ============================================================================
@@ -123,8 +132,8 @@ void MPC::buildGradientVector(const Eigen::VectorXd& x0, const Eigen::VectorXd& 
     
     // Gradient: g = 2 * Su^T * Q_bar * (X_ref - Sx * x0)
     // We want to minimize ||X - X_ref||²_Q, so gradient points toward X_ref
-    // The sign is (X_ref - X_free) not (X_free - X_ref)
-    g = 2.0 * Su.transpose() * Q_bar * (X_ref - X_free);
+    // [FIXED]: The mathematical sign was inverted. The correct gradient for minimizing ||X - X_ref||²_Q is proportional to (X_free - X_ref).
+    g = 2.0 * Su.transpose() * Q_bar * (X_free - X_ref);
 }
 
 // ============================================================================
@@ -135,7 +144,9 @@ void MPC::solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
                  Eigen::VectorXd& U_opt, int max_iter, double tolerance) {
     
     // Initialize with zeros
-    U_opt = Eigen::VectorXd::Zero(N_ * B_.cols());
+    // [FIXED]: Disabled cold start (zeroing out U_opt) to enable Warm Start. 
+    // The optimization now correctly resumes from the previous MPC step's solution.
+    // U_opt = Eigen::VectorXd::Zero(N_ * B_.cols());
     
     // Adaptive step size - use Lipschitz constant of gradient
     // For quadratic problem, step_size = 1 / (2 * largest_eigenvalue(H))

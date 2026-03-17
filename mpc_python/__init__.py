@@ -1,3 +1,12 @@
+"""
+ * @file            model_predictive_control/mpc_python/__init__.py
+ * @description     
+ * @author          nicewang <wangxiaonannice@gmail.com>
+ * @createTime      2026-03-16
+ * @lastModified    2026-03-17
+ * Copyright © Xiaonan (Nice) Wang. All rights reserved
+"""
+
 import numpy as np
 import sys
 
@@ -13,7 +22,6 @@ class MPCController:
     """
     def __init__(self, A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, 
                  u_min: np.ndarray, u_max: np.ndarray, N: int):
-        # 确保传入的是 numpy 浮点数组 (Eigen 默认映射为 float64/double)
         A = np.asarray(A, dtype=np.float64)
         B = np.asarray(B, dtype=np.float64)
         Q = np.asarray(Q, dtype=np.float64)
@@ -37,3 +45,4 @@ class MPCController:
         Get the first control action to apply to the system.
         """
         return self._mpc.get_first_input()
+    

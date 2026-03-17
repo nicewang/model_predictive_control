@@ -1,3 +1,12 @@
+/*
+ * @file            model_predictive_control/mpc_python/cpp/mpc.h
+ * @description     
+ * @author          nicewang <wangxiaonannice@gmail.com>
+ * @createTime      2026-03-16
+ * @lastModified    2026-03-16
+ * Copyright © Xiaonan (Nice) Wang. All rights reserved
+*/
+
 #ifndef MPC_H
 #define MPC_H
 
