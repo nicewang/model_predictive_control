@@ -10,12 +10,12 @@ https://nicewang.github.io/model_predictive_control/
 
 #### Package Structure
 ```
-mpc_python_project/
+${project_workspace}/
 ├── mpc_python/
 │   ├── __init__.py
 │   └── cpp/
-│       ├── mpc.h          <-- copy fr. main:basic_template/include/mpc.h
-│       ├── mpc.cpp        <-- copy fr. main:basic_template/src/mpc.cpp
+│       ├── mpc.h          <-- corresponding to main:basic_template/include/mpc.h
+│       ├── mpc.cpp        <-- corresponding to main:basic_template/src/mpc.cpp
 │       └── bindings.cpp   
 ├── CMakeLists.txt         
 ├── pyproject.toml         
@@ -24,7 +24,13 @@ mpc_python_project/
 
 ### Install
 
-- Manually:
+#### Local Install:
 ```bash
+cd model_predictive_control/
+pip install -e .
+```
 
+#### Remote Install
+```bash
+pip install git+https://github.com/nicewang/model_predictive_control.git@basic_template_py
 ```

@@ -10,12 +10,20 @@ build-backend = "scikit_build_core.build"
 [project]
 name = "mpc_python"
 version = "0.1.0"
-description = "Python bindings for C++ Basic MPC Template"
+description = "Python Library of C++ based Basic MPC Template"
+authors = [
+  {name = "Xiaonan (Nice) Wang <wangxiaonannice@gmail.com>"}
+]
+license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "numpy"
 ]
+
+[project.urls]
+repository = "https://github.com/nicewang/model_predictive_control/tree/basic_template_py"
+homepage = "https://nicewang.github.io/model_predictive_control/"
 
 [tool.scikit-build]
 cmake.source-dir = "." 
