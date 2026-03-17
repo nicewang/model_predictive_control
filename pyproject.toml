@@ -24,6 +24,7 @@ dependencies = [
 [project.urls]
 repository = "https://github.com/nicewang/model_predictive_control/tree/basic_template_py"
 homepage = "https://nicewang.github.io/model_predictive_control/"
+documentation = "https://github.com/nicewang/model_predictive_control/tree/basic_template_py/README.md"
 
 [tool.scikit-build]
 cmake.source-dir = "." 
