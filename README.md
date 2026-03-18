@@ -1,4 +1,4 @@
-## Model Predictive Control Python Lib
+## Basic Model Predictive Control Python Lib
 Python Library of Basic Model Predictive Control Template
 - Simple box-constrained QP (Quadratic Programming) form MPC Solver
 #### MPC Components
