@@ -3,7 +3,7 @@
  * @description     
  * @author          nicewang <wangxiaonannice@gmail.com>
  * @createTime      2026-03-16
- * @lastModified    2026-03-16
+ * @lastModified    2026-03-18
  * Copyright © Xiaonan (Nice) Wang. All rights reserved
 */
 
@@ -62,7 +62,7 @@ public:
     Eigen::VectorXd getFirstInput() const { return U_opt_.head(B_.cols()); }
 
 private:
-    // ============ System Parameters ============
+    // ========== System Parameters ==========
     Eigen::MatrixXd A_;      // State transition matrix (nx × nx)
     Eigen::MatrixXd B_;      // Control input matrix (nx × nu)
     Eigen::MatrixXd Q_;      // State cost weight matrix (nx × nx)
@@ -71,11 +71,11 @@ private:
     Eigen::VectorXd u_max_;  // Control input upper bounds (nu × 1)
     int N_;                  // Prediction horizon length
     
-    // ============ Optimization Variables ============
+    // ========== Optimization Variables ==========
     Eigen::VectorXd U_opt_;  // Optimal control sequence [u(0); u(1); ...; u(N-1)]
     
-    // ============ Helper Functions ============
-    
+    // ========== Functions of Core Components ==========
+
     /**
      * @brief Component 1: Build the expanded prediction matrices
      * 
@@ -130,6 +130,8 @@ private:
     void solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
                 Eigen::VectorXd& U_opt, int max_iter = 200, double tolerance = 1e-6);
     
+    // ========== Utility Functions ==========
+
     /**
      * @brief Project vector onto box constraints [u_min, u_max]
      * @param u Input vector
