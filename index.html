@@ -200,9 +200,15 @@
         <div class="cycle">
             <h3>⚙️ MPC Control Loop at Each Time Step</h3>
             <div class="cycle-steps">
-                <div class="step">Measure State x(k): State Estimation (real-sys) / state = obs[0] (sim)</div>
+                <div class="step">
+                    Measure State x(k): / <br>
+                    State Estimation (real-sys) / <br> 
+                    or state = obs[0] (sim)</div>
                 <span class="arrow">→</span>
-                <div class="step">Build Optimization Problem: Set the Current Constraints, Invoke the Prediction Model</div>
+                <div class="step">
+                    Build Optimization Problem: / <br>
+                    Set the Current Constraints, / <br>
+                    Invoke the Prediction Model</div>
                 <span class="arrow">→</span>
                 <div class="step">Solve for Optimal Sequence</div>
                 <span class="arrow">→</span>
