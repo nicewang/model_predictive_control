@@ -10,7 +10,7 @@
 #include "PgdUtils.h"
 
 
-Eigen::VectorXd PgdUtils::projectToBox(const Eigen::VectorXd& u, 
+Eigen::VectorXd PgdUtils::projectToBoxConstraints(const Eigen::VectorXd& u, 
                                             const Eigen::MatrixXd B,
                                             const Eigen::VectorXd& u_min, 
                                             const Eigen::VectorXd& u_max, 
@@ -32,7 +32,7 @@ Eigen::VectorXd PgdUtils::projectToBox(const Eigen::VectorXd& u,
     return u_proj;
 }
 
-Eigen::VectorXd PgdUtils::projectToBox(const Eigen::VectorXd& u, 
+Eigen::VectorXd PgdUtils::projectToBoxConstraints(const Eigen::VectorXd& u, 
                                             const Eigen::VectorXd& u_min, 
                                             const Eigen::VectorXd& u_max, 
                                             int N) {
