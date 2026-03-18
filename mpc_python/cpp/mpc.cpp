@@ -164,8 +164,7 @@ void MPC::solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
         U_opt = U_opt - step_size * gradient;
         
         // Project onto box constraints
-        // U_opt = projectToBoxConstraints(U_opt);
-        U_opt = PgdUtils::projectToBoxConstraints(U_opt, B_, u_min_, u_max_, N_);
+        U_opt = PgdUtils::projectToBoxConstraints(U_opt, u_min_, u_max_, N_);
         
         // Check convergence
         double error = (U_opt - U_prev).norm();
@@ -173,21 +172,4 @@ void MPC::solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
             break;
         }
     }
-}
-
-// ================================================================================
-// UTILITY: Box Constraint Projection
-// ================================================================================
-Eigen::VectorXd MPC::projectToBoxConstraints(const Eigen::VectorXd& u) const {
-    Eigen::VectorXd u_proj = u;
-    
-    // Project each control input to its bounds
-    for (int i = 0; i < N_; ++i) {
-        for (int j = 0; j < B_.cols(); ++j) {
-            int idx = i * B_.cols() + j;
-            u_proj(idx) = std::max(u_min_(j), std::min(u_max_(j), u_proj(idx)));
-        }
-    }
-    
-    return u_proj;
 }

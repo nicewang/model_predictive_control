@@ -129,15 +129,6 @@ private:
      */
     void solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
                 Eigen::VectorXd& U_opt, int max_iter = 200, double tolerance = 1e-6);
-    
-    // ========== Utility Functions ==========
-
-    /**
-     * @brief Project vector onto box constraints [u_min, u_max]
-     * @param u Input vector
-     * @return Clipped vector
-     */
-    Eigen::VectorXd projectToBoxConstraints(const Eigen::VectorXd& u) const;
 };
 
 #endif // MPC_H
