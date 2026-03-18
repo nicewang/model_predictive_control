@@ -8,6 +8,7 @@
 */
 
 #include "mpc.h"
+#include "utils/PgdUtils.h"
 
 // ================================================================================
 // CONSTRUCTOR: Initialize MPC controller with system parameters
@@ -163,7 +164,8 @@ void MPC::solveQP(const Eigen::MatrixXd& H, const Eigen::VectorXd& g,
         U_opt = U_opt - step_size * gradient;
         
         // Project onto box constraints
-        U_opt = projectToBoxConstraints(U_opt);
+        // U_opt = projectToBoxConstraints(U_opt);
+        U_opt = PgdUtils::projectToBoxConstraints(U_opt, B_, u_min_, u_max_, N_);
         
         // Check convergence
         double error = (U_opt - U_prev).norm();

@@ -11,7 +11,9 @@ find_package(pybind11 REQUIRED)
 
 pybind11_add_module(mpc_core 
     mpc_python/cpp/bindings.cpp
-    mpc_python/cpp/mpc.cpp 
+    mpc_python/cpp/mpc.cpp
+    mpc_python/cpp/utils/PgdUtils.h
+    mpc_python/cpp/utils/PgdUtils.cpp
 )
 
 target_include_directories(mpc_core PUBLIC
