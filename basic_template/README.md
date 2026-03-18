@@ -1,5 +1,6 @@
 ## Model Predictive Control
 Basic Model Predictive Control Template
+- Simple box-constrained QP (Quadratic Programming) form MPC Solver
 #### MPC Components
 - Prediction Model
 - Cost Function (Optimization Target) & Constraints
