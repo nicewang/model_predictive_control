@@ -9,7 +9,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "mpc_python"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python Library of C++ based Basic MPC Template"
 authors = [
   {name = "Xiaonan (Nice) Wang <wangxiaonannice@gmail.com>"}
