@@ -15,9 +15,9 @@ BINDIR = bin
 LIBDIR = lib
 
 # Source and Object Files
-SRCFILES = $(SRCDIR)/mpc.cpp $(SRCDIR)/main.cpp
-OBJFILES = $(OBJDIR)/mpc.o $(OBJDIR)/main.o
-HEADER_FILES = $(INCDIR)/mpc.h
+SRCFILES = $(SRCDIR)/mpc.cpp $(SRCDIR)/PgdUtils.cpp $(SRCDIR)/main.cpp
+OBJFILES = $(OBJDIR)/mpc.o $(OBJDIR)/PgdUtils.o $(OBJDIR)/main.o
+HEADER_FILES = $(INCDIR)/mpc.h $(INCDIR)/PgdUtils.h
 
 # Build Targets
 
@@ -43,7 +43,8 @@ $(EXECUTABLE): $(OBJFILES) | $(BINDIR)
 shared: CXXFLAGS += -shared
 shared: $(SRCDIR)/mpc.cpp $(HEADER_FILES) | $(LIBDIR)
 	@echo "[Building] Creating shared library: $(SHARED_LIB)"
-	$(CXX) $(CXXFLAGS) -I$(INCDIR) $(SRCDIR)/mpc.cpp -o $(SHARED_LIB) $(LDFLAGS)
+# 	$(CXX) $(CXXFLAGS) -I$(INCDIR) $(SRCDIR)/mpc.cpp -o $(SHARED_LIB) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -shared $(OBJFILES) -o $(SHARED_LIB) $(LDFLAGS)
 	@echo "[Success] Shared library created: $(SHARED_LIB)"
 
 # Build Static Library
