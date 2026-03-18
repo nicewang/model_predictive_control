@@ -16,9 +16,11 @@ ${project_workspace}/
     ├── CMakeLists.txt
     ├── src/
     │   ├── mpc.cpp
+    │   ├── PgdUtils.cpp
     │   └── main.cpp
     └── include/
         └── mpc.h
+        └── PgdUtils.h
 ```
 
 ### Appendix: Locally Build & Run
@@ -26,7 +28,7 @@ ${project_workspace}/
 - Manually:
 ```bash
 # Build
-mkdir out/ && g++ -std=c++11 -I/usr/local/include/eigen3 -Iinclude src/mpc.cpp src/main.cpp -o out/mpc-demo
+mkdir out/ && g++ -std=c++11 -I/usr/local/include/eigen3 -Iinclude src/mpc.cpp src/PgdUtils.cpp src/main.cpp -o out/mpc-demo
 
 # Run
 ./out/mpc-demo
@@ -34,6 +36,7 @@ mkdir out/ && g++ -std=c++11 -I/usr/local/include/eigen3 -Iinclude src/mpc.cpp s
 # Clean
 rm -rf out/
 ```
+
 - Use Make:
 ```bash
 # Build

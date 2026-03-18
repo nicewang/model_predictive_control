@@ -11,11 +11,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 # Source Files (Using relative paths to current directory)
 set(SRCFILES 
-    src/mpc.cpp 
+    src/mpc.cpp
+    src/PgdUtils.cpp
     src/main.cpp
 )
 set(HEADERS
     include/mpc.h
+    include/PgdUtils.h
 )
 
 # Include Directories
