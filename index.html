@@ -193,16 +193,16 @@
             <div class="section">
                 <h2><span class="section-number">4</span>Feedback Correction</h2>
                 <p>Apply only the optimal control input at the current time step u₀, then re-optimize at the next time step to eliminate model mismatch</p>
-                <p style="margin-top: 8px; color: #718096;">This is the essence of "Receding Horizon"—the optimization window rolls forward with updated measurements</p>
+                <p style="margin-top: 8px; color: #718096;">This is the essence of "Receding Horizon": the optimization window rolls forward with updated measurements</p>
             </div>
         </div>
         
         <div class="cycle">
             <h3>⚙️ MPC Control Loop at Each Time Step</h3>
             <div class="cycle-steps">
-                <div class="step">Measure State x(k)</div>
+                <div class="step">Measure State x(k): State Estimation (real-sys) / state = obs[0] (sim)</div>
                 <span class="arrow">→</span>
-                <div class="step">Build Optimization Problem</div>
+                <div class="step">Build Optimization Problem: Set the Current Constraints, Invoke the Prediction Model</div>
                 <span class="arrow">→</span>
                 <div class="step">Solve for Optimal Sequence</div>
                 <span class="arrow">→</span>
