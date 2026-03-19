@@ -4,7 +4,7 @@ $$
 E = mc^2
 $$
 -->
-## Model Predictive Control
+## Model Predictive Control[^1]
 ### 1. Basic Template
 > [Model Predictive Control Template](basic_template/)
 
@@ -52,3 +52,4 @@ And, there are several ways for combining learning and model predictive control:
 	>	- Huang, Zixuan, et al. "Subgoal Diffuser: Coarse-to-fine Subgoal Generation to Guide Model Predictive Control for Robot Manipulation." _arXiv_ _preprint_ _arXiv:2403.13085_ (2024).	
 	>	- [Video Link](https://www.youtube.com/watch?v=M0gmBtzZKwM)
 
+[^1]: The contents of this README stem from a lecture and several papers the maintainer came across when starting this repository. Please note that it is incomplete and will be refined over time.
