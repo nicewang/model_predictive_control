@@ -4,6 +4,7 @@ $$
 E = mc^2
 $$
 -->
+_<font Times>label: Step 2: Trial and Error</font>_
 ## Model Predictive Control[^1]
 ### 1. Basic Template
 > [Model Predictive Control Template](basic_template/)
