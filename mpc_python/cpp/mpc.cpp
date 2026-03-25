@@ -79,6 +79,7 @@ void MPC::buildPredictionMatrices(Eigen::MatrixXd& Sx, Eigen::MatrixXd& Su) {
         Sx.block(k * A_.rows(), 0, A_.rows(), A_.rows()) = A_power;
         
         // Fill Su: coefficients of control inputs
+        // BUG
         // Eigen::MatrixXd A_power_temp = Eigen::MatrixXd::Identity(A_.rows(), A_.rows());
         // for (int j = 0; j <= k; ++j) {
         //     Su.block(k * A_.rows(), j * B_.cols(), A_.rows(), B_.cols()) = A_power_temp * B_;
@@ -86,9 +87,9 @@ void MPC::buildPredictionMatrices(Eigen::MatrixXd& Sx, Eigen::MatrixXd& Su) {
         //         A_power_temp = A_ * A_power_temp;
         //     }
         // }
-        // BUG-FIX
-        //    |
-        //    v
+        // FIX
+        //  |
+        //  v
         Eigen::MatrixXd A_power_temp = Eigen::MatrixXd::Identity(A_.rows(), A_.rows());
         for (int j = k; j >= 0; --j) {
             // Note: j decreases in reverse order to ensure that u(k) corresponds to B and u(0) corresponds to A^k * B.
