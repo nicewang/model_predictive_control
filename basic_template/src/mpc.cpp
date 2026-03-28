@@ -80,9 +80,9 @@ void MPC::buildPredictionMatrices(Eigen::MatrixXd& Sx, Eigen::MatrixXd& Su) {
         
         // Fill Su: coefficients of control inputs
         Eigen::MatrixXd A_power_temp = Eigen::MatrixXd::Identity(A_.rows(), A_.rows());
-        for (int j = 0; j <= k; ++j) {
+        for (int j = k; j >= 0; --j) {
             Su.block(k * A_.rows(), j * B_.cols(), A_.rows(), B_.cols()) = A_power_temp * B_;
-            if (j < k) {
+            if (j > 0) {
                 A_power_temp = A_ * A_power_temp;
             }
         }
