@@ -45,8 +45,13 @@ def run_mpc_experiment(Q_weight, R_weight, N_horizon):
     
     # 2. Simulation Loop
     for k in range(100):
-        mpc.solve(x_current, x_ref)
-        u_first = mpc.get_first_input()
+        
+        u = mpc.solve(x_current, x_ref)
+
+        u = np.clip(u, u_min, u_max)
+        
+        # Propagate
+        x_current = A @ x_current + B @ u
 
         error = np.linalg.norm(x_current - x_ref)
         total_error += error
@@ -60,13 +65,10 @@ def run_mpc_experiment(Q_weight, R_weight, N_horizon):
             values=[
                 float(x_current[0]),
                 float(x_current[1]),
-                float(u_first[0]),
+                float(u[0]),
                 float(error)
             ]
         )
-
-        # Propagate
-        x_current = A @ x_current + B @ u_first
 
         if error < 0.01:
             print(f"  -> Converged at step {k}!")
