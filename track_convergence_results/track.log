@@ -8,9 +8,9 @@ Testing: Q=100.0, R=0.01, N=2
   - Inputs (nu): 1
   - Prediction horizon (N): 2
   -> Converged at step 10!
-rc: <mongita.results.InsertOneResult object at 0x1224a0430>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba1
-  -> Error: 30.38 | Time: 0.0011s
+rc: <mongita.results.InsertOneResult object at 0x116da3fd0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c2
+  -> Error: 30.38 | Time: 0.0017s
 
 Testing: Q=100.0, R=0.01, N=5
 [MPC] Initialized with:
@@ -18,9 +18,9 @@ Testing: Q=100.0, R=0.01, N=5
   - Inputs (nu): 1
   - Prediction horizon (N): 5
   -> Converged at step 11!
-rc: <mongita.results.InsertOneResult object at 0x1224a0160>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba4
-  -> Error: 30.01 | Time: 0.0015s
+rc: <mongita.results.InsertOneResult object at 0x116de40a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c5
+  -> Error: 30.01 | Time: 0.0017s
 
 Testing: Q=100.0, R=0.01, N=10
 [MPC] Initialized with:
@@ -28,18 +28,18 @@ Testing: Q=100.0, R=0.01, N=10
   - Inputs (nu): 1
   - Prediction horizon (N): 10
   -> Converged at step 18!
-rc: <mongita.results.InsertOneResult object at 0x1224a05e0>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba5
-  -> Error: 34.48 | Time: 0.0041s
+rc: <mongita.results.InsertOneResult object at 0x116de4520>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c6
+  -> Error: 34.48 | Time: 0.0032s
 
 Testing: Q=100.0, R=0.01, N=20
 [MPC] Initialized with:
   - States (nx): 2
   - Inputs (nu): 1
   - Prediction horizon (N): 20
-rc: <mongita.results.InsertOneResult object at 0x1224a0490>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba6
-  -> Error: 62.16 | Time: 0.0267s
+rc: <mongita.results.InsertOneResult object at 0x116de4340>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c7
+  -> Error: 62.16 | Time: 0.0280s
 
 Testing: Q=100.0, R=0.1, N=2
 [MPC] Initialized with:
@@ -47,8 +47,8 @@ Testing: Q=100.0, R=0.1, N=2
   - Inputs (nu): 1
   - Prediction horizon (N): 2
   -> Converged at step 10!
-rc: <mongita.results.InsertOneResult object at 0x1224a0220>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba7
+rc: <mongita.results.InsertOneResult object at 0x116de43a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c8
   -> Error: 30.38 | Time: 0.0008s
 
 Testing: Q=100.0, R=0.1, N=5
@@ -57,9 +57,9 @@ Testing: Q=100.0, R=0.1, N=5
   - Inputs (nu): 1
   - Prediction horizon (N): 5
   -> Converged at step 11!
-rc: <mongita.results.InsertOneResult object at 0x1224a0430>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba8
-  -> Error: 30.01 | Time: 0.0014s
+rc: <mongita.results.InsertOneResult object at 0x116de40a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865c9
+  -> Error: 30.01 | Time: 0.0013s
 
 Testing: Q=100.0, R=0.1, N=10
 [MPC] Initialized with:
@@ -67,18 +67,18 @@ Testing: Q=100.0, R=0.1, N=10
   - Inputs (nu): 1
   - Prediction horizon (N): 10
   -> Converged at step 18!
-rc: <mongita.results.InsertOneResult object at 0x1224a0160>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39ba9
-  -> Error: 34.48 | Time: 0.0031s
+rc: <mongita.results.InsertOneResult object at 0x116de4520>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865ca
+  -> Error: 34.48 | Time: 0.0026s
 
 Testing: Q=100.0, R=0.1, N=20
 [MPC] Initialized with:
   - States (nx): 2
   - Inputs (nu): 1
   - Prediction horizon (N): 20
-rc: <mongita.results.InsertOneResult object at 0x1224a05e0>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39baa
-  -> Error: 62.16 | Time: 0.0276s
+rc: <mongita.results.InsertOneResult object at 0x116de4340>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865cb
+  -> Error: 62.16 | Time: 0.0260s
 
 Testing: Q=10.0, R=0.01, N=2
 [MPC] Initialized with:
@@ -86,9 +86,9 @@ Testing: Q=10.0, R=0.01, N=2
   - Inputs (nu): 1
   - Prediction horizon (N): 2
   -> Converged at step 10!
-rc: <mongita.results.InsertOneResult object at 0x1224a0490>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bab
-  -> Error: 30.38 | Time: 0.0008s
+rc: <mongita.results.InsertOneResult object at 0x116de43a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865cc
+  -> Error: 30.38 | Time: 0.0011s
 
 Testing: Q=10.0, R=0.01, N=5
 [MPC] Initialized with:
@@ -96,9 +96,9 @@ Testing: Q=10.0, R=0.01, N=5
   - Inputs (nu): 1
   - Prediction horizon (N): 5
   -> Converged at step 11!
-rc: <mongita.results.InsertOneResult object at 0x1224a0220>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bac
-  -> Error: 30.01 | Time: 0.0035s
+rc: <mongita.results.InsertOneResult object at 0x116de40a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865cd
+  -> Error: 30.01 | Time: 0.0013s
 
 Testing: Q=10.0, R=0.01, N=10
 [MPC] Initialized with:
@@ -106,18 +106,18 @@ Testing: Q=10.0, R=0.01, N=10
   - Inputs (nu): 1
   - Prediction horizon (N): 10
   -> Converged at step 18!
-rc: <mongita.results.InsertOneResult object at 0x1224a0430>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bad
-  -> Error: 34.48 | Time: 0.0035s
+rc: <mongita.results.InsertOneResult object at 0x116de4520>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865ce
+  -> Error: 34.48 | Time: 0.0026s
 
 Testing: Q=10.0, R=0.01, N=20
 [MPC] Initialized with:
   - States (nx): 2
   - Inputs (nu): 1
   - Prediction horizon (N): 20
-rc: <mongita.results.InsertOneResult object at 0x1224a0160>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bae
-  -> Error: 62.16 | Time: 0.0278s
+rc: <mongita.results.InsertOneResult object at 0x116de4340>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865cf
+  -> Error: 62.16 | Time: 0.0265s
 
 Testing: Q=10.0, R=0.1, N=2
 [MPC] Initialized with:
@@ -125,9 +125,9 @@ Testing: Q=10.0, R=0.1, N=2
   - Inputs (nu): 1
   - Prediction horizon (N): 2
   -> Converged at step 10!
-rc: <mongita.results.InsertOneResult object at 0x1224a05e0>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39baf
-  -> Error: 30.38 | Time: 0.0010s
+rc: <mongita.results.InsertOneResult object at 0x116de43a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865d0
+  -> Error: 30.38 | Time: 0.0007s
 
 Testing: Q=10.0, R=0.1, N=5
 [MPC] Initialized with:
@@ -135,8 +135,8 @@ Testing: Q=10.0, R=0.1, N=5
   - Inputs (nu): 1
   - Prediction horizon (N): 5
   -> Converged at step 11!
-rc: <mongita.results.InsertOneResult object at 0x1224a0490>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bb0
+rc: <mongita.results.InsertOneResult object at 0x116de40a0>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865d1
   -> Error: 30.01 | Time: 0.0014s
 
 Testing: Q=10.0, R=0.1, N=10
@@ -145,39 +145,38 @@ Testing: Q=10.0, R=0.1, N=10
   - Inputs (nu): 1
   - Prediction horizon (N): 10
   -> Converged at step 18!
-rc: <mongita.results.InsertOneResult object at 0x1224a0220>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bb1
-  -> Error: 34.48 | Time: 0.0027s
+rc: <mongita.results.InsertOneResult object at 0x116de4520>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865d2
+  -> Error: 34.48 | Time: 0.0026s
 
 Testing: Q=10.0, R=0.1, N=20
 [MPC] Initialized with:
   - States (nx): 2
   - Inputs (nu): 1
   - Prediction horizon (N): 20
-rc: <mongita.results.InsertOneResult object at 0x1224a0430>
-TrackResultsMongoDB.add(replace=False): inserted record with id=69e25ccf9690869882b39bb2
-  -> Error: 62.14 | Time: 0.0327s
+rc: <mongita.results.InsertOneResult object at 0x116de4340>
+TrackResultsMongoDB.add(replace=False): inserted record with id=69e339969425b59d3b1865d3
+  -> Error: 62.14 | Time: 0.0274s
 
 =========================================
        All Experiments Summary
 =========================================
-                                        parameters_Q_w  parameters_R_w  ...  results_total_tracking_error  results_convergence_step
-_id                                                                     ...                                                        
-69e25ccf9690869882b39ba4  [[100.0, 0.0], [0.0, 100.0]]            0.01  ...                     30.011209                        11
-69e25ccf9690869882b39ba8  [[100.0, 0.0], [0.0, 100.0]]            0.10  ...                     30.011226                        11
-69e25ccf9690869882b39bac    [[10.0, 0.0], [0.0, 10.0]]            0.01  ...                     30.011226                        11
-69e25ccf9690869882b39bb0    [[10.0, 0.0], [0.0, 10.0]]            0.10  ...                     30.011410                        11
-69e25ccf9690869882b39baf    [[10.0, 0.0], [0.0, 10.0]]            0.10  ...                     30.375962                        10
-69e25ccf9690869882b39bab    [[10.0, 0.0], [0.0, 10.0]]            0.01  ...                     30.383446                        10
-69e25ccf9690869882b39ba7  [[100.0, 0.0], [0.0, 100.0]]            0.10  ...                     30.383446                        10
-69e25ccf9690869882b39ba1  [[100.0, 0.0], [0.0, 100.0]]            0.01  ...                     30.384191                        10
-69e25ccf9690869882b39bb1    [[10.0, 0.0], [0.0, 10.0]]            0.10  ...                     34.476694                        18
-69e25ccf9690869882b39ba9  [[100.0, 0.0], [0.0, 100.0]]            0.10  ...                     34.481515                        18
-69e25ccf9690869882b39bad    [[10.0, 0.0], [0.0, 10.0]]            0.01  ...                     34.481515                        18
-69e25ccf9690869882b39ba5  [[100.0, 0.0], [0.0, 100.0]]            0.01  ...                     34.481998                        18
-69e25ccf9690869882b39bb2    [[10.0, 0.0], [0.0, 10.0]]            0.10  ...                     62.139893                        99
-69e25ccf9690869882b39baa  [[100.0, 0.0], [0.0, 100.0]]            0.10  ...                     62.156698                        99
-69e25ccf9690869882b39bae    [[10.0, 0.0], [0.0, 10.0]]            0.01  ...                     62.156698                        99
-69e25ccf9690869882b39ba6  [[100.0, 0.0], [0.0, 100.0]]            0.01  ...                     62.158381                        99
-
+                                        parameters_Q_w  parameters_R_w  parameters_N  results_total_tracking_error  results_convergence_step
+_id                                                                                                                                         
+69e339969425b59d3b1865c5  [[100.0, 0.0], [0.0, 100.0]]            0.01             5                     30.011209                        11
+69e339969425b59d3b1865c9  [[100.0, 0.0], [0.0, 100.0]]            0.10             5                     30.011226                        11
+69e339969425b59d3b1865cd    [[10.0, 0.0], [0.0, 10.0]]            0.01             5                     30.011226                        11
+69e339969425b59d3b1865d1    [[10.0, 0.0], [0.0, 10.0]]            0.10             5                     30.011410                        11
+69e339969425b59d3b1865d0    [[10.0, 0.0], [0.0, 10.0]]            0.10             2                     30.375962                        10
+69e339969425b59d3b1865cc    [[10.0, 0.0], [0.0, 10.0]]            0.01             2                     30.383446                        10
+69e339969425b59d3b1865c8  [[100.0, 0.0], [0.0, 100.0]]            0.10             2                     30.383446                        10
+69e339969425b59d3b1865c2  [[100.0, 0.0], [0.0, 100.0]]            0.01             2                     30.384191                        10
+69e339969425b59d3b1865d2    [[10.0, 0.0], [0.0, 10.0]]            0.10            10                     34.476694                        18
+69e339969425b59d3b1865ca  [[100.0, 0.0], [0.0, 100.0]]            0.10            10                     34.481515                        18
+69e339969425b59d3b1865ce    [[10.0, 0.0], [0.0, 10.0]]            0.01            10                     34.481515                        18
+69e339969425b59d3b1865c6  [[100.0, 0.0], [0.0, 100.0]]            0.01            10                     34.481998                        18
+69e339969425b59d3b1865d3    [[10.0, 0.0], [0.0, 10.0]]            0.10            20                     62.139893                        99
+69e339969425b59d3b1865cb  [[100.0, 0.0], [0.0, 100.0]]            0.10            20                     62.156698                        99
+69e339969425b59d3b1865cf    [[10.0, 0.0], [0.0, 10.0]]            0.01            20                     62.156698                        99
+69e339969425b59d3b1865c7  [[100.0, 0.0], [0.0, 100.0]]            0.01            20                     62.158381                        99
 [16 rows x 5 columns]

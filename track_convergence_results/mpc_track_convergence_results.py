@@ -48,7 +48,7 @@ def run_mpc_experiment(Q_weight, R_weight, N_horizon):
         
         u = mpc.solve(x_current, x_ref)
 
-        u = np.clip(u, u_min, u_max)
+        # u = np.clip(u, u_min, u_max)
         
         # Propagate
         x_current = A @ x_current + B @ u
