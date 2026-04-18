@@ -118,8 +118,9 @@ int main() {
         // 4. Feedback Correction: Returns only u(0), will re-optimize next step
         Eigen::VectorXd u = mpc.solve(x, x_ref);
         
-        // Clamp input to ensure it respects bounds
-        u = u.cwiseMax(u_min).cwiseMin(u_max);
+        // seems redundant clip-constraint?
+        // // Clamp input to ensure it respects bounds
+        // u = u.cwiseMax(u_min).cwiseMin(u_max);
         
         // Apply control input and propagate system dynamics
         x = A * x + B * u;
