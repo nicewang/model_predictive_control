@@ -11,3 +11,4 @@
 **/out/
 **/*.pdf
 **/__pycache__/
+.vscode/
